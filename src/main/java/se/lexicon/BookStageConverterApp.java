@@ -46,8 +46,26 @@ public class BookStageConverterApp {
                         System.out.println("Invalid time choice");
                     }
                     break;
-            }
 
+                case 2: // Speed Converter
+                    System.out.println("choose conversion:");
+                    int speedchoice = scanner.nextInt();
+
+                    if (speedchoice == 1) {
+                        System.out.println("Enter speed in km/h:");
+                        double kmh = scanner.nextDouble();
+                        double ms = kmh / 3.6;
+                        System.out.println(kmh + "km/h =" + ms + "m/s");
+                    } else if (speedchoice == 2) {
+                        System.out.println("Enter speed in m/s:");
+                        double ms = scanner.nextDouble();
+                        double kmh = ms * 3.6;
+                        System.out.println(ms + "m/s = " + kmh + "km/h");
+
+                    } else {
+                        System.out.println("Invalid speed choice");
+                    }
+            }      break;
         }
     }
 
